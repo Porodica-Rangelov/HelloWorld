@@ -1,32 +1,21 @@
 print("Dobrodosli u sume prvih 10 brojeva")
 
 suma = 0
-
 for i in range(1, 11):
     suma += i
 
-print(suma)
+print("Suma prirodnih brojeva od 1 do 10: ", suma)
 
 suma = 0
-brojac = 0
-n = 1
+for i in range(1, 11):
+    if i % 2 == 0:
+        suma += i
 
-while brojac < 10:
-    if n % 2 == 0:
-        suma += n
-        brojac += 1
-    n += 1
-
-print(suma)
+print("Suma parnih brojeva od 1 do 10: ", suma)
 
 suma = 0
-brojac = 0
-n = 1
+for i in range(1, 11):
+    if i % 2 != 0:
+        suma += i        
 
-while brojac < 10:
-    if n % 2 != 0:
-        suma += n
-        brojac += 1
-    n += 1
-
-print(suma)
+print("Suma neparnih brojeva od 1 do 10: ", suma)
