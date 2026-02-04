@@ -1,4 +1,4 @@
-﻿<div align="center">
+<div align="center">
 
 # Python zadaci za početnika
 
@@ -23,39 +23,54 @@
 ## Kako da koristiš Codex u Visual Studio Code
 - 🧩 Instaliraj dodatak „OpenAI Codex“ iz Extensions (Ctrl+Shift+X).
 - 🔐 Prijavi se ili unesi API ključ u podešavanjima dodatka.
-- 📝 Otvori `.py` fajl i napiši kratak opis zadatka u komentaru ili u poruci Codex‑u.
+- 📝 Otvori `.py` fajl i napiši kratak opis zadatka u komentaru ili u poruci Codex-u.
 - 🧭 Koristi komande kao: „objasni mi ovaj kod“, „nađi grešku“, „predloži poboljšanje“.
 - 🔍 Pročitaj predlog, izmeni po potrebi, pa pokreni kod da vidiš rezultat.
-- ❓ Ako nešto nije jasno, traži objašnjenje korak‑po‑korak.
+- ❓ Ako nešto nije jasno, traži objašnjenje korak-po-korak.
 
-## Zadaci
+---
 
-1. **Suma cifara višecifrenog broja**  
-Unesi višecifreni broj i izračunaj zbir njegovih cifara.  
-Koristi petlju i operatore `%` i `//`.
+## 🧩 Zadaci (TODO)
 
-2. **Sume prvih 10 brojeva**  
-a) Zbir brojeva od 1 do 10.  
-b) Zbir prvih 10 parnih brojeva.  
-c) Zbir prvih 10 neparnih brojeva.
+### 🟢 Task 1: Suma cifara višecifrenog broja
+- [ ] Uneti višecifreni broj
+- [ ] Izračunati zbir njegovih cifara
+- [ ] Koristiti `%` i `//` u petlji
 
-3. **Sortiranje elemenata niza – rastuće**  
-Unesi 10 celih brojeva u listu i sortiraj ih rastuće.  
-Nije dozvoljeno koristiti ugrađene funkcije za sortiranje.  
-Implementiraj Bubble Sort i prikaži listu pre i posle sortiranja.
+---
 
-4. **Sortiranje elemenata niza – opadajuće**  
-Unesi 10 celih brojeva u listu i sortiraj ih opadajuće.  
-Nije dozvoljeno koristiti ugrađene funkcije za sortiranje.  
-Implementiraj Bubble Sort i prikaži rezultat opadajuće.
+### 🟢 Task 2: Sume brojeva (3 podzadatka)
+- [ ] Izračunati zbir brojeva od 1 do 10
+- [ ] Izračunati zbir prvih 10 parnih brojeva
+- [ ] Izračunati zbir prvih 10 neparnih brojeva
 
-5. **Aritmetička sredina niza**  
-Izračunaj aritmetičku sredinu unetih brojeva u listi.  
-Zbir svih elemenata / `len(lista)`.
+---
 
-6. **Proizvod elemenata niza**  
-Izračunaj proizvod svih elemenata liste.  
-Početna vrednost proizvoda je 1, pa u petlji množi svaki element.
+### 🟢 Task 3: Sortiranje elemenata niza – rastuće
+- [ ] Uneti 10 celih brojeva u listu
+- [ ] Implementirati Bubble Sort (bez ugrađenih funkcija)
+- [ ] Prikazati listu pre i posle sortiranja
+
+---
+
+### 🟢 Task 4: Sortiranje elemenata niza – opadajuće
+- [ ] Uneti 10 celih brojeva u listu
+- [ ] Implementirati Bubble Sort (bez ugrađenih funkcija)
+- [ ] Sortirati listu opadajuće i prikazati rezultat
+
+---
+
+### 🟢 Task 5: Aritmetička sredina niza
+- [ ] Uneti brojeve u listu
+- [ ] Izračunati zbir elemenata
+- [ ] Podeliti zbir sa `len(lista)`
+
+---
+
+### 🟢 Task 6: Proizvod elemenata niza
+- [ ] Inicijalizovati proizvod na 1
+- [ ] U petlji množiti svaki element liste
+- [ ] Prikazati konačan proizvod
 
 ---
 
