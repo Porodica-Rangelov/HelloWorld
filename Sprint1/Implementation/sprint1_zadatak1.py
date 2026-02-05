@@ -11,3 +11,30 @@
 #    - U svakoj iteraciji generisati random broj pomocu `random.randint(1, 100)`
 #    - Dodati broj u listu pomocu `append()`
 # 5. Prikazati generisani niz
+
+# Importujemo random modul koji sadrži funkcije za generisanje slučajnih brojeva
+import random
+
+# Unos broja N od korisnika
+# input() funkcija čita korisnički unos kao string
+# int() konvertuje taj string u ceo broj (integer)
+N = int(input("Unesite broj N: "))
+
+# Kreiramo praznu listu koja će čuvati generisane random brojeve
+niz = []
+
+# For petlja koja se izvršava N puta (od 0 do N-1)
+# range(N) generiše sekvencu brojeva od 0 do N-1
+# Promenljiva i predstavlja trenutnu iteraciju (0, 1, 2, ..., N-1)
+for i in range(N):
+    # random.randint(1, 100) generiše slučajan ceo broj između 1 i 100 (uključujući obe granice)
+    # Generisani broj čuvamo u promenljivoj "broj"
+    broj = random.randint(1, 100)
+
+    # append() metoda dodaje element na kraj liste
+    # Svaki generisani broj dodajemo u našu listu "niz"
+    niz.append(broj)
+
+# Ispisujemo konačan generisani niz
+# print() funkcija prikazuje tekst i sadržaj liste na ekranu
+print("Generisani niz:", niz)
