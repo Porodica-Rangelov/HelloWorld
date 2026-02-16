@@ -1,10 +1,10 @@
 <#
 .SYNOPSIS
-  Create GitHub Issues from Sprint1.md tasks.
+  Create GitHub Issues from Sprint2.md tasks.
 .DESCRIPTION
-  Parses Sprint1.md, extracts each "### Task X:" section,
+  Parses Sprint2.md, extracts each "### Task X:" section,
   and creates a new GitHub Issue with the appropriate title,
-  body, and labels (sprint1, complexity level).
+  body, and labels (sprint2, complexity level).
   Skips tasks that already have a matching open issue.
 #>
 
@@ -21,14 +21,14 @@ $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $MdPath    = Join-Path $ScriptDir "Sprint2.md"
 
 if (-not (Test-Path $MdPath)) {
-    Write-Error "Sprint1.md not found: $MdPath"
+    Write-Error "Sprint2.md not found: $MdPath"
     exit 1
 }
 
 # ----------------------------
 # Ensure labels exist
 $RequiredLabels = @(
-    @{ Name = "sprint1";       Color = "1D76DB"; Description = "Sprint 1 zadatak" }
+    @{ Name = "sprint2";       Color = "1D76DB"; Description = "Sprint 2 zadatak" }
     @{ Name = "complexity-1";  Color = "0E8A16"; Description = "Lak zadatak" }
     @{ Name = "complexity-2";  Color = "FBCA04"; Description = "Srednji zadatak" }
     @{ Name = "complexity-3";  Color = "D93F0B"; Description = "Tezi zadatak" }
@@ -52,10 +52,10 @@ Write-Host "`nLoading existing issues..." -ForegroundColor Cyan
 $ExistingIssues = gh issue list --state open --limit 100 --json title --jq ".[].title" 2>$null
 
 # ----------------------------
-# Parse Sprint1.md
+# Parse Sprint2.md
 $Lines = Get-Content $MdPath
 
-Write-Host "`nParsing Sprint1.md..." -ForegroundColor Cyan
+Write-Host "`nParsing Sprint2.md..." -ForegroundColor Cyan
 
 $Tasks = @()
 
@@ -103,7 +103,7 @@ $Skipped = 0
 
 foreach ($task in $Tasks) {
 
-    $IssueTitle = "Sprint1 - Task $($task.Number): $($task.Title)"
+    $IssueTitle = "Sprint2 - Task $($task.Number): $($task.Title)"
     $IssueTitle = Remove-NonAscii $IssueTitle
 
     # Check for duplicate
@@ -121,7 +121,7 @@ foreach ($task in $Tasks) {
         continue
     }
 
-    $Labels = "sprint1,complexity-$($task.Complexity)"
+    $Labels = "sprint2,complexity-$($task.Complexity)"
 
     $IssueBody = Remove-NonAscii $task.Body
 
@@ -148,3 +148,4 @@ Write-Host "`n========================================" -ForegroundColor Cyan
 Write-Host "  Created: $Created issue(s)" -ForegroundColor Green
 Write-Host "  Skipped: $Skipped (already exist)" -ForegroundColor Yellow
 Write-Host "========================================`n" -ForegroundColor Cyan
+
