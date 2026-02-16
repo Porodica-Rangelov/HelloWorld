@@ -18,7 +18,7 @@ function Remove-NonAscii {
 # ----------------------------
 # Config
 $ScriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$MdPath    = Join-Path $ScriptDir "Sprint1.md"
+$MdPath    = Join-Path $ScriptDir "Sprint2.md"
 
 if (-not (Test-Path $MdPath)) {
     Write-Error "Sprint1.md not found: $MdPath"
