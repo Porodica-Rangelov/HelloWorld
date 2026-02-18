@@ -1,1 +1,15 @@
-test
+# FastCode-Claude Pipeline Upload Script
+
+# Sample Python script for uploading files
+
+def upload_file(file_path, destination):
+    import os
+    
+    if os.path.exists(file_path):
+        # Logic for uploading the file to the destination
+        print(f'Uploading {file_path} to {destination}')
+    else:
+        print(f'File {file_path} does not exist.')
+
+# Example usage
+upload_file('example.txt', 's3://my-bucket/')
