@@ -1,0 +1,18 @@
+name: Run Sprint 2 Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run Python script
+        run: |
+          python3 Sprint2/upload_to_github.py
